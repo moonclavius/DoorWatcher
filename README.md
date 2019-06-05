@@ -1,10 +1,10 @@
 # DoorWatcher
 DoorWatcher is an IoT project that opens doors with the help of "face recognition". In addition it also allows monitoring via the browser. 
 
+Note: you can find all documentations for every scripes at [Documentation](/Documentation) directory.   
 
 ## Contents
 * [Prerequisites](#Prerequisites)
-* [Developer Guidance](#Developer-Guidance)
 * [Installation](#Installation)
 * [Usage](#Usage)
 * [Troubleshooting and FAQ](#Troubleshooting-and-FAQ)
@@ -19,15 +19,12 @@ DoorWatcher is an IoT project that opens doors with the help of "face recognitio
 - OpenCV & Dlib
 - Virtual environment
 
-## Developer Guidance
-
-NOTICE: you can find all documentations for every scripes at `MoonClavius/DoorWatcher/Documentation` directory.   
 
 ## Installation
-### Requirements
+### Setup
 First we will remove unnecessary packages and then we will install all required libraries with the help of the **doorwatcher_requiments.sh** script... (the installation and updating process depends on your internet speed)
   1. give the script wirting rights `chmod +x doorwatcher_requiments.sh` and run the script `/.doorwatcher_requiments.sh`
-### Software
+### Installing Requirements
 Next we are going to install all needed packages, OpenCV4, dlib, and more with the **doorwatcher_software.sh** script... (the installation process will last around 2-3h)
   1. move the script to home directory `mv doorwatcher_software.sh ~/doorwatcher_software.sh`
   2. give the script wirting rights `chmod +x doorwatcher_software.sh` and run the script `/.doorwatcher_software.sh`
@@ -35,7 +32,7 @@ Next we are going to install all needed packages, OpenCV4, dlib, and more with t
 ## Usage
 
 
-## Troubleshooting and FAQ
+## Troubleshooting
 #### [1] ERROR
   ```
   modprobe: ERROR: ../libkmod/libkmod.c:586 kmod_search_moddep() could not open moddep file '/lib/modules/4.14.98-v7+/modules.dep.bin'
