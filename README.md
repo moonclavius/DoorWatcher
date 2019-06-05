@@ -3,10 +3,10 @@ DoorWatcher is an IoT project that opens doors with the help of "face recognitio
 
 
 ## Contents
-* Equipment
-* Installation
-* Usage
-* Troubleshooting and FAQ
+* [Equipment](##Equipment)
+* [Installation](##Installation)
+* [Usage](##Usage)
+* [Troubleshooting and FAQ](##Troubleshooting-and-FAQ)
 
 ***
 
