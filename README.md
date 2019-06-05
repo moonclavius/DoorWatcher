@@ -24,7 +24,7 @@ DoorWatcher is an IoT project that opens doors with the help of "face recognitio
 NOTICE: you can find all documentations for every scripes at `MoonClavius/DoorWatcher/Documentation` directory.   
 
 ## Installation
-First we are going to install all needed packages with the **doorwatcher_software.sh** script. After the completed installation you will have all needed packages, OpenCV, dlib, ... (the installation process will last around 2-3h)
+First we are going to install all needed packages with the **doorwatcher_software.sh** script. After the completed installation you will have all needed packages, OpenCV4, dlib, ... (the installation process will last around 2-3h)
   1. move the script to home directory `mv doorwatcher_software.sh ~/doorwatcher_software.sh`
   2. give the script wirting rights `chmod +x doorwatcher_software.sh` and run the script `/.doorwatcher_software.sh`
 
