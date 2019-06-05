@@ -3,14 +3,15 @@ DoorWatcher is an IoT project that opens doors with the help of "face recognitio
 
 
 ## Contents
-* [Equipment](#Equipment)
+* [Prerequisites](#Prerequisites)
+* [Developer Guidance](#Developer-Guidance)
 * [Installation](#Installation)
 * [Usage](#Usage)
 * [Troubleshooting and FAQ](#Troubleshooting-and-FAQ)
 
 ***
 
-## Equipment
+## Prerequisites
 ### Hardware
 - Raspberry Pi Zero W
 - Camera V2.1 NoIR
@@ -18,8 +19,12 @@ DoorWatcher is an IoT project that opens doors with the help of "face recognitio
 - OpenCV & dlib
 - Virtual environment
 
+## Developer Guidance
+
+NOTICE: you can find all documentations for every scripes at `MoonClavius/DoorWatcher/Documentation` directory.   
+
 ## Installation
-First we are going to install all needed packages with the **doorwatcher_software.sh** script. This will take around 2-3h mainly because of the dlib and the opencv compiling...  
+First we are going to install all needed packages with the **doorwatcher_software.sh** script. After the completed installation you will have all needed packages, OpenCV, dlib, ... (the installation process will last around 2-3h)
   1. move the script to home directory `mv doorwatcher_software.sh ~/doorwatcher_software.sh`
   2. give the script wirting rights `chmod +x doorwatcher_software.sh` and run the script `/.doorwatcher_software.sh`
 
@@ -51,7 +56,7 @@ First we are going to install all needed packages with the **doorwatcher_softwar
   make[1]: *** [modules/core/CMakeFiles/opencv_test_core_pch_dephelp.dir/all] Error 2
   make[1]: *** Waiting for unfinished jobs....
   ```
-  To fix this error you will need to change the file **cmake/OpenCVFindLibsPerf.cmake**. If you can't find the file just go to the root directory `cd /` and run the this command `sudo find -name "OpenCVFindLibsPerf.cmake"`
+  To fix this error you will need to make changes in the **cmake/OpenCVFindLibsPerf.cmake** file. If you can't find the file just go to the root directory `cd /` and run the this command `sudo find -name "OpenCVFindLibsPerf.cmake"`
   
   LINE | OLD | NEW 
   --- | --- | ---
