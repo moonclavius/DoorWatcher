@@ -7,7 +7,7 @@ Note: you can find all documentations for every scripes at [Documentation](/Docu
 * [Prerequisites](#Prerequisites)
 * [Installation](#Installation)
 * [Usage](#Usage)
-* [Troubleshooting and FAQ](#Troubleshooting)
+* [Troubleshooting](#Troubleshooting)
 
 ***
 
