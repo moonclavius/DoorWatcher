@@ -16,7 +16,7 @@ DoorWatcher is an IoT project that opens doors with the help of "face recognitio
 - Raspberry Pi Zero W
 - Camera V2.1 NoIR
 ### Software
-- OpenCV & dlib
+- OpenCV & Dlib
 - Virtual environment
 
 ## Developer Guidance
@@ -24,7 +24,12 @@ DoorWatcher is an IoT project that opens doors with the help of "face recognitio
 NOTICE: you can find all documentations for every scripes at `MoonClavius/DoorWatcher/Documentation` directory.   
 
 ## Installation
-First we are going to install all needed packages with the **doorwatcher_software.sh** script. After the completed installation you will have all needed packages, OpenCV4, dlib, ... (the installation process will last around 2-3h)
+### Requirements
+First we will remove unnecessary packages and then we will install all required libraries with the help of the **doorwatcher_requiments.sh** script... (the installation and updating process depends on your internet speed)
+  1. give the script wirting rights `chmod +x doorwatcher_requiments.sh` and run the script `/.doorwatcher_requiments.sh`
+
+### Software
+Next we are going to install all needed packages, OpenCV4, dlib, and more with the **doorwatcher_software.sh** script... (the installation process will last around 2-3h)
   1. move the script to home directory `mv doorwatcher_software.sh ~/doorwatcher_software.sh`
   2. give the script wirting rights `chmod +x doorwatcher_software.sh` and run the script `/.doorwatcher_software.sh`
 
