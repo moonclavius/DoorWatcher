@@ -16,8 +16,8 @@ known_face_encodings = [
     person2_face_encoding
 ]
 known_face_names = [
-    "Uros",
-    "Cindy"
+    "Person1",
+    "Person2"
 ]
 
 # Initialize some variables
