@@ -30,7 +30,9 @@ Next we are going to install all needed packages, OpenCV4, dlib, and more with t
   2. give the script wirting rights `chmod +x doorwatcher_software.sh` and run the script `/.doorwatcher_software.sh`
 
 ## Usage
-
+!!!!!!!!!!!!!!!
+ERKLÄRUNG FEHLT
+!!!!!!!!!!!!!!!
 
 ## Troubleshooting
 #### [1] ERROR
