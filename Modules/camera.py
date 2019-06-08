@@ -2,6 +2,7 @@ import cv2
 import time
 import imutils
 import numpy as np
+
 from imutils.video.pivideostream import PiVideoStream
 
 class VideoCamera(object):
@@ -25,7 +26,7 @@ class VideoCamera(object):
 
     def get_object(self, classifier):
         found_objects = False
-        frame = self.flip_if_needed(self.vs.read()).copy() 
+        frame = self.flip_if_needed(self.vs.read()).copy()
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
         objects = classifier.detectMultiScale(
@@ -45,5 +46,4 @@ class VideoCamera(object):
 
         ret, jpeg = cv2.imencode('.jpg', frame)
         return (jpeg.tobytes(), found_objects)
-
 
