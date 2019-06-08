@@ -35,7 +35,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D INSTALL_PYTHON_EXAMPLES=OFF \
     -D BUILD_EXAMPLES=OFF ..
 
-make -j4
+make -j1
 make install
 sudo ldconfig
 
@@ -49,8 +49,8 @@ echo "==========================================================================
 
 
 echo -e ${RED}"================================${GREEN}[3/3]: Move cv2.so...${RED}================================"${NC}
-cd ~/.virtualenvs/cv/lib/python3.5/site-packages/
-ln -s /usr/local/python/cv2/python-3.5/cv2.cpython-35m-arm-linux-gnueabihf.so cv2.so
+cd ~/opencv/build/lib/python3
+sudo cp cv2.cpython-35m-arm-linux-gnueabihf.so /usr/local/lib/python3.5/dist-packages/cv2.so
 cd ~
 echo "================================================================================================================================"
 
