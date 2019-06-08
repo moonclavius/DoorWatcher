@@ -8,7 +8,7 @@ from camera import VideoCamera
 from flask import Flask, render_template, Response
 
 video_camera = VideoCamera(flip=False)
-object_classifier = cv2.CascadeClassifier("facial_recognition_model.xml")
+object_classifier = cv2.CascadeClassifier("model/facial_recognition_model.xml")
 
 
 app = Flask(__name__)
@@ -45,4 +45,3 @@ if __name__ == '__main__':
     t.daemon = True
     t.start()
     app.run(host='0.0.0.0', debug=False)
-
