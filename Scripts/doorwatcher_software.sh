@@ -14,6 +14,8 @@ sudo sed -i 's/CONF_SWAPSIZE=100/CONF_SWAPSIZE=2048/g' /etc/dphys-swapfile
 sudo /etc/init.d/dphys-swapfile stop
 sudo /etc/init.d/dphys-swapfile start
 sudo pip install numpy dlib
+
+sudo pip3 --no-cache-dir install face_recognition
 sudo pip3 install git+https://github.com/ageitgey/face_recognition_models
 deactivate
 echo "================================================================================================================================"
