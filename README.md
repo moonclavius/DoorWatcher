@@ -67,3 +67,8 @@ ERKLÄRUNG FEHLT
   49 |`list(APPEND OPENCV_LINKER_LIBS Eigen3::Eigen)`|`#list(APPEND OPENCV_LINKER_LIBS Eigen3::Eigen)`           
   50 |`set(HAVE_EIGEN 1)`| `#set(HAVE_EIGEN 1)`
   
+  #### [3] ERROR
+  ```
+  .sh file: /bin/bash^M: bad interpreter
+  ```
+  To fix this error just simple run following command `sed -i -e 's/\r$//' doorwatcher_software.sh` and then agian `sudo /.doorwatcher_software.sh`
