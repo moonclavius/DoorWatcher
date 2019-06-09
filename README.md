@@ -17,7 +17,8 @@ Note: you can find all documentations for every scripes at [Documentation](/Docu
 - Camera V2.1 NoIR
 ### Software
 - OpenCV & Dlib
-- Virtual environment
+- virtual environment
+- face_recognition
 
 
 ## Installation
