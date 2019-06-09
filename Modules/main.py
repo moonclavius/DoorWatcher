@@ -19,8 +19,8 @@ known_face_encodings = [
     p2_face_encoding
 ]
 known_face_names = [
-    "Person 1",
-    "Person 2"
+    "Barack Obama",
+    "Novak Dokovic"
 ]
 
 last_epoch = 0
