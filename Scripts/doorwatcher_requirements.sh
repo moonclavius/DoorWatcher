@@ -70,8 +70,6 @@ echo "==========================================================================
 echo -e ${RED}"================================${GREEN}[7/7]: Install Camera modules...${RED}================================"${NC}
 sudo pip3 install imutils
 sudo pip3 install flask
-sudo pip3 install picamera[array]
-sudo pip3 install Flask-BasicAuth==0.2.0
 echo "================================================================================================================================"
 
 source ~/.profile
