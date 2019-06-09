@@ -91,3 +91,9 @@ To change the recognition time just change the line 35 `if (time.time() - last_e
   .sh file: /bin/bash^M: bad interpreter
   ```
   To fix this error just simple run following command `sed -i -e 's/\r$//' doorwatcher_software.sh` and then agian `sudo /.doorwatcher_software.sh`
+  
+  #### [4] ERROR
+  ```
+  modprobe: ERROR: could not insert 'bcm2835_v4l2': Operation not permitted
+  ```
+  To fix this error you will need to follow step 1 at [Usage](#Usage).
