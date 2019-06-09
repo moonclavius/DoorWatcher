@@ -25,10 +25,10 @@ echo -e ${RED}"================================${GREEN}[2/3]: Compile and instal
 workon cv
 
 cd opencv
-mkdir build
+sudo mkdir build
 cd build
 
-cmake -D CMAKE_BUILD_TYPE=RELEASE \
+sudo cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D CMAKE_INSTALL_PREFIX=/usr/local \
     -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules \
     -D ENABLE_NEON=ON \
@@ -38,8 +38,8 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D INSTALL_PYTHON_EXAMPLES=OFF \
     -D BUILD_EXAMPLES=OFF ..
 
-make -j1
-make install
+sudo make -j1
+sudo make install
 sudo ldconfig
 
 sudo sed -i 's/CONF_SWAPSIZE=2048/CONF_SWAPSIZE=100/g' /etc/dphys-swapfile
