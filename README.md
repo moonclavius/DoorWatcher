@@ -1,7 +1,9 @@
 # DoorWatcher
 DoorWatcher is an IoT project that opens doors with the help of "face recognition". In addition it also allows monitoring via the browser. With the help of OpenCV a face can easly be recognised and identificated. Depending on the use, additional GPIO pins can be controlled to open a door, for example. 
 
-Note: you can find all documentations for every scripes at [Documentation](/Documentation) directory.   
+Note: you can find all documentations for every scripes at [Documentation](/Documentation) directory.
+
+This project is made with the help of [HackerShackOfficial](https://github.com/HackerShackOfficial/Smart-Security-Camera) and [face_recognition](https://github.com/ageitgey/face_recognition).
 
 ## Contents
 * [Prerequisites](#Prerequisites)
@@ -31,9 +33,17 @@ Next we are going to install all needed packages, OpenCV4, dlib, and more with t
   2. give the script wirting rights `chmod +x doorwatcher_software.sh` and run the script `sudo /.doorwatcher_software.sh`
 
 ## Usage
-!!!!!!!!!!!!!!!
-ERKLÄRUNG FEHLT
-!!!!!!!!!!!!!!!
+1. In order for us to work with facial recognition we need to enable the interface on the Raspberry Pi. We do this with the following command: `sudo raspi-config`. Select `Interface Options`, then `Pi Camera` and toggle on. Press `Finish` and exit.
+
+2. Run the program `sudo python3 ~/DoorWatcher/Modules/main.py`. 
+
+You can view a live stream by visiting the ip address of your pi in a browser on the same network. You can find the ip address of your Raspberry Pi by typing `ifconfig` in the terminal and looking for the `inet` address.
+
+Visit `<raspberrypi_ip>:5000` in your browser to view the stream.
+
+Note: To view the live stream on a different network than your Raspberry Pi, you can use [ngrok](https://ngrok.com/) to expose a local tunnel. Once downloaded, run ngrok with `./ngrok http 5000` and visit one of the generated links in your browser.
+
+Note: The video stream will not start automatically on startup. To start the video stream automatically, you will need to run the program from your `/etc/rc.local` file see this [video](https://www.youtube.com/watch?v=51dg2MsYHns&feature=youtu.be&t=7m4s) for more information about how to configure that.
 
 ## Troubleshooting
 #### [1] ERROR
