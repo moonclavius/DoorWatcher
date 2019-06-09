@@ -21,7 +21,7 @@ def check_for_objects():
                         frame, found_obj = video_camera.get_object(object_classifier)
                         if found_obj and (time.time() - last_epoch) > 2:
                                 last_epoch = time.time()
-				facefinder(frame)
+                                facefinder(video_camera.get_frame())
                 except:
                         print ("Error finding_face: "), sys.exc_info()[0]
 
