@@ -26,7 +26,7 @@ First we will remove unnecessary packages and then we will install all required 
   1. give the script wirting rights `chmod +x doorwatcher_requiments.sh` and run the script `/.doorwatcher_requiments.sh`
 ### Installing Requirements
 Next we are going to install all needed packages, OpenCV4, dlib, and more with the **doorwatcher_software.sh** script... (the installation process will last around 2-3h)
-  1. move the script to home directory `mv doorwatcher_software.sh ~/doorwatcher_software.sh`
+  1. move the script to home directory `mv ~/DoorWatcher/Scripts/doorwatcher_software.sh ~/doorwatcher_software.sh`
   2. give the script wirting rights `chmod +x doorwatcher_software.sh` and run the script `/.doorwatcher_software.sh`
 
 ## Usage
