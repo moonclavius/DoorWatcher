@@ -8,10 +8,10 @@ from flask import Flask, render_template, Response
 
 video_capture = cv2.VideoCapture(0, cv2.CAP_V4L)
 
-p1 = face_recognition.load_image_file("p1.jpg")
+p1 = face_recognition.load_image_file("pictures/p1.jpg")
 p1_face_encoding = face_recognition.face_encodings(p1)[0]
 
-p2 = face_recognition.load_image_file("p2.jpg")
+p2 = face_recognition.load_image_file("pictures/p2.jpg")
 p2_face_encoding = face_recognition.face_encodings(p2)[0]
 
 known_face_encodings = [
