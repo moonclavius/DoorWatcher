@@ -40,10 +40,6 @@ class VideoCamera(object):
         if len(objects) > 0:
             found_objects = True
 
-        # Draw a rectangle around the objects
-        for (x, y, w, h) in objects:
-            cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
-
         ret, jpeg = cv2.imencode('.jpg', frame)
         return (jpeg.tobytes(), found_objects)
 
