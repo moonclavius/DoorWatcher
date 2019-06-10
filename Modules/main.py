@@ -12,9 +12,11 @@ video_capture = PiVideoStream().start()
 time.sleep(2.0)
 
 p1 = face_recognition.load_image_file("pictures/p1.jpg")
+# Pre-calculated face encoding of p1 generated with face_recognition.face_encodings(p1)
 p1_face_encoding = face_recognition.face_encodings(p1)[0]
 
 p2 = face_recognition.load_image_file("pictures/p2.jpg")
+# Pre-calculated face encoding of p2 generated with face_recognition.face_encodings(p2)
 p2_face_encoding = face_recognition.face_encodings(p2)[0]
 
 known_face_encodings = [
