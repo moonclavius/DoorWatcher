@@ -54,7 +54,7 @@ def get_object():
 def check_for_objects():
         global last_epoch
         while True:
-		        frame, found_obj = get_object()
+                frame, found_obj = get_object()
                 if found_obj and (time.time() - last_epoch) > 5:
                         last_epoch = time.time()
                         
