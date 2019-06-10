@@ -57,7 +57,7 @@ def check_for_objects():
         global last_epoch
         while True:
                 frame, found_obj = get_object()
-                if found_obj and (time.time() - last_epoch) > 2:
+                if found_obj and (time.time() - last_epoch) > 5:
                         last_epoch = time.time()
                         
                         small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
