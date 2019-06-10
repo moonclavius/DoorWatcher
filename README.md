@@ -49,7 +49,7 @@ Note: To view the live stream on a different network than your Raspberry Pi, you
 Note: The video stream will not start automatically on startup. To start the video stream automatically, you will need to run the program from your `/etc/rc.local` file see this [video](https://www.youtube.com/watch?v=51dg2MsYHns&feature=youtu.be&t=7m4s) for more information about how to configure that.
 
 ## Customization
-Frist you can change the pictures with this command `raspistill -o ~/DoorWatcher/Modules/pictures/p1.jpg` and add how much you need.
+Frist you can change the pictures with this command `raspistill -o DoorWatcher/Modules/pictures/p1.jpg` and add how much you need.
 
 If you want to change the size of the streaming than you will need to change the file **DoorWatcher/Modules/templates/index.html**.
 Make sure you choose the right sizes when you change the 6 line `<img id="bg" src="{{ url_for('video_feed') }}" style="height:600px; width:800px;">`.
