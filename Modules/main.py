@@ -1,12 +1,15 @@
 import cv2
 import sys
 import time
+import imutils
 import threading
 import numpy as np
 import face_recognition
 from flask import Flask, render_template, Response
+from imutils.video.pivideostream import PiVideoStream
 
-video_capture = cv2.VideoCapture(0, cv2.CAP_V4L)
+video_capture = PiVideoStream().start()
+time.sleep(2.0)
 
 p1 = face_recognition.load_image_file("pictures/p1.jpg")
 p1_face_encoding = face_recognition.face_encodings(p1)[0]
@@ -26,16 +29,35 @@ known_face_names = [
 last_epoch = 0
 face_locations = []
 face_encodings = []
+classifier = cv2.CascadeClassifier("models/facial_recognition_model.xml")
 
 app = Flask(__name__)
+
+def get_object():
+        found_objects = False
+        frame = video_capture.read()
+        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+        objects = classifier.detectMultiScale(
+            gray,
+            scaleFactor=1.1,
+            minNeighbors=5,
+            minSize=(30, 30),
+            flags=cv2.CASCADE_SCALE_IMAGE
+        )
+
+        if len(objects) > 0:
+            found_objects = True
+
+        return (frame, found_objects)
 
 def check_for_objects():
         global last_epoch
         while True:
-                if (time.time() - last_epoch) > 5:
+		        frame, found_obj = get_object()
+                if found_obj and (time.time() - last_epoch) > 5:
                         last_epoch = time.time()
                         
-                        ret, frame = video_capture.read()
                         small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
                         rgb_small_frame = small_frame[:, :, ::-1]
                         
@@ -56,7 +78,7 @@ def index():
     return render_template('index.html')
 
 def get_frame():
-        success, image = video_capture.read()
+        image = video_capture.read()
         ret, jpeg = cv2.imencode('.jpg', image)
         return jpeg.tobytes()
 
