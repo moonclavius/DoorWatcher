@@ -24,9 +24,9 @@ echo "==========================================================================
 echo -e ${RED}"================================${GREEN}[2/3]: Compile and install OpenCV with OpenCV_Contrib modules...${RED}================================"${NC}
 workon cv
 
-cd opencv
+sudo cd opencv
 sudo mkdir build
-cd build
+sudo cd build
 
 sudo cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D CMAKE_INSTALL_PREFIX=/usr/local \
@@ -52,9 +52,9 @@ echo "==========================================================================
 
 
 echo -e ${RED}"================================${GREEN}[3/3]: Move cv2.so...${RED}================================"${NC}
-cd ~/opencv/build/lib/python3
+sudo cd ~/opencv/build/lib/python3
 sudo cp cv2.cpython-35m-arm-linux-gnueabihf.so /usr/local/lib/python3.5/dist-packages/cv2.so
-cd ~
+sudo cd ~
 echo "================================================================================================================================"
 
 
