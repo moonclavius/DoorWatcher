@@ -20,7 +20,7 @@ Note: This project is made with the help of [HackerShackOfficial](https://github
 - OpenCV & Dlib
 - virtual environment
 - face_recognition
-
+- at least [Raspbian Stretch with desktop](https://www.raspberrypi.org/downloads/raspbian/)
 
 ## Installation
 ### Setup
