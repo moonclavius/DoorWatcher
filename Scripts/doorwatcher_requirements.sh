@@ -40,15 +40,15 @@ echo "==========================================================================
 
 
 echo -e ${RED}"================================${GREEN}[5/7]: Download OpenCV and OpenCV_Contrib...${RED}================================"${NC}
-cd ~
+sudo cd ~
 sudo wget -O opencv.zip https://github.com/opencv/opencv/archive/4.0.0.zip
 sudo wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.0.0.zip
 
 sudo unzip opencv.zip
 sudo unzip opencv_contrib.zip
 
-mv opencv-4.0.0 opencv
-mv opencv_contrib-4.0.0 opencv_contrib
+sudo mv opencv-4.0.0 opencv
+sudo mv opencv_contrib-4.0.0 opencv_contrib
 echo "================================================================================================================================"
 
 
