@@ -26,11 +26,11 @@ Note: This project is made with the help of [HackerShackOfficial](https://github
 ### Setup
 First we will remove unnecessary packages and then we will install all required libraries with the help of the **doorwatcher_requiments.sh** script... (the installation and updating process depends on your internet speed)
   1. move the script to home directory `mv ~/DoorWatcher/Scripts/doorwatcher_requiments.sh ~/doorwatcher_requiments.sh`
-  2. give the script wirting rights `chmod +x doorwatcher_requiments.sh` and run the script `sudo /.doorwatcher_requiments.sh`
+  2. give the script wirting rights `chmod +x doorwatcher_requiments.sh` and run the script `sudo ./doorwatcher_requiments.sh`
 ### Installing Requirements
 Next we are going to install all needed packages, OpenCV4, dlib, and more with the **doorwatcher_software.sh** script... (the installation process will last around 2-3h)
   1. move the script to home directory `mv ~/DoorWatcher/Scripts/doorwatcher_software.sh ~/doorwatcher_software.sh`
-  2. give the script wirting rights `chmod +x doorwatcher_software.sh` and run the script `sudo /.doorwatcher_software.sh`
+  2. give the script wirting rights `chmod +x doorwatcher_software.sh` and run the script `sudo ./doorwatcher_software.sh`
 
 ## Usage
 1. In order for us to work with facial recognition we need to enable the interface on the Raspberry Pi. We do this with the following command: `sudo raspi-config`. Select `Interface Options`, then `Pi Camera` and toggle on. Press `Finish` and exit.
@@ -90,7 +90,7 @@ To change the recognition time just change the line 35 `if (time.time() - last_e
   ```
   .sh file: /bin/bash^M: bad interpreter
   ```
-  To fix this error just simple run following command `sed -i -e 's/\r$//' doorwatcher_software.sh` and then agian `sudo /.doorwatcher_software.sh`
+  To fix this error just simple run following command `sed -i -e 's/\r$//' doorwatcher_software.sh` and then agian `sudo ./doorwatcher_software.sh`
   
   #### [4] ERROR
   ```
