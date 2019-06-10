@@ -52,7 +52,7 @@ echo "==========================================================================
 
 
 echo -e ${RED}"================================${GREEN}[3/3]: Move cv2.so...${RED}================================"${NC}
-sudo cd ~/opencv/build/lib/python3
+sudo cd opencv/build/lib/python3
 sudo cp cv2.cpython-35m-arm-linux-gnueabihf.so /usr/local/lib/python3.5/dist-packages/cv2.so
 sudo cd ~
 echo "================================================================================================================================"
