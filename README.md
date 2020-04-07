@@ -1,7 +1,7 @@
 # DoorWatcher
 DoorWatcher is an IoT project that opens doors with the help of "face recognition". In addition it also allows monitoring via the browser. With the help of OpenCV a face can easly be recognised and identified. Depending on the use, additional GPIO pins can be controlled to open a door, for example. 
 
-Note: This project is made with the help of [HackerShackOfficial](https://github.com/HackerShackOfficial/Smart-Security-Camera) and [face_recognition](https://github.com/ageitgey/face_recognition).
+Note: This project is made with the help of [HackerShackOfficial](https://github.com/HackerShackOfficial/Smart-Security-Camera) and [face_recognition](https://github.com/aamini/face_recognition).
 
 ## Contents
 * [Prerequisites](#Prerequisites)
